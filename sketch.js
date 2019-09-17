@@ -27,6 +27,11 @@ function draw(){
   line(x, y, width/2, height/2)
   }
   }
+//Space Jitter
+  for (let y = 0; y < 100; y++) {
+  let x = randomGaussian(250, 650);
+  line(250, 5500, x, y);
+} 
 //Snow Dots - Black and White
   for(var i = 0; i < 50; i+=1){
     fill(250)
@@ -85,6 +90,7 @@ function draw(){
   fill(120)
   quad(20, 20, 30, 30, 30, 470, 20, 480)
   quad(470, 30, 480, 20, 480, 480, 470, 470)
+  
 //Items rotating in space
   translate(250, 250);
   translate(p5.Vector.fromAngle(millis() / 500, 40));
@@ -99,4 +105,5 @@ function draw(){
   translate(p5.Vector.fromAngle(millis() / 500+i*4, 70));
   fill(200)
   ellipse(0, 0, 20, 20);
+
 }
